@@ -1,7 +1,7 @@
 {
   "name": "@rmojsejkov/loco-mcp",
-  "version": "0.1.0",
-  "description": "Safe MCP tooling for Loco translation projects",
+  "version": "0.1.1",
+  "description": "MCP server for safely inspecting and importing Loco translations",
   "type": "module",
   "bin": {
     "loco-mcp": "dist/index.js"

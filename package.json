@@ -1,5 +1,5 @@
 {
-  "name": "@123fahrschule/loco-mcp",
+  "name": "@rmojsejkov/loco-mcp",
   "version": "0.1.0",
   "description": "Safe MCP tooling for Loco translation projects",
   "type": "module",
@@ -21,8 +21,16 @@
   "engines": {
     "node": ">=20"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmojsejkov/loco-mcp.git"
+  },
+  "homepage": "https://github.com/rmojsejkov/loco-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/rmojsejkov/loco-mcp/issues"
+  },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "license": "UNLICENSED",
   "dependencies": {

@@ -1,6 +1,6 @@
 [mcp_servers.loco]
 command = "npx"
-args = ["-y", "@123fahrschule/loco-mcp"]
+args = ["-y", "@rmojsejkov/loco-mcp"]
 env = { LOCO_IMPORT_LOCALE = "de" }
 startup_timeout_sec = 30
 tool_timeout_sec = 120

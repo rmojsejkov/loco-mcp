@@ -80,7 +80,7 @@ After publishing, replace `command` and `args` with:
 
 ```json
 "command": "npx",
-"args": ["-y", "@123fahrschule/loco-mcp"]
+"args": ["-y", "@rmojsejkov/loco-mcp"]
 ```
 
 Ready-to-copy host examples are available in `examples/`.

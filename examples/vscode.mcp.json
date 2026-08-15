@@ -11,7 +11,7 @@
     "loco": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@123fahrschule/loco-mcp"],
+      "args": ["-y", "@rmojsejkov/loco-mcp"],
       "env": {
         "LOCO_API_KEY": "${input:loco-api-key}",
         "LOCO_IMPORT_LOCALE": "de",

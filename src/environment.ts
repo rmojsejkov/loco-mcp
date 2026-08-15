@@ -1,5 +1,5 @@
 import { existsSync, readFileSync } from 'node:fs';
-import { isAbsolute, resolve } from 'node:path';
+import { basename, isAbsolute, resolve } from 'node:path';
 
 const ENV_FILE_NAME = '.env.loco';
 const API_KEY_NAME = 'LOCO_API_KEY';
@@ -78,12 +78,9 @@ export const getLocoApiKey = (repositoryRoot: string): string => {
 
 export const getLocoEnvironment = (): LocoEnvironment => {
   const workspaceRoot = findWorkspaceRoot();
-  const projectName = process.env.LOCO_PROJECT_NAME?.trim();
+  const projectName =
+    process.env.LOCO_PROJECT_NAME?.trim() || basename(workspaceRoot);
   const importLocale = process.env.LOCO_IMPORT_LOCALE?.trim() || 'de';
-
-  if (!projectName) {
-    throw new Error('Missing required LOCO_PROJECT_NAME');
-  }
 
   if (!/^[A-Za-z]{2}(?:[-_][A-Za-z]{2})?$/u.test(importLocale)) {
     throw new Error(

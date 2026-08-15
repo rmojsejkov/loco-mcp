@@ -5,7 +5,6 @@
       "command": "npx",
       "args": ["-y", "@123fahrschule/loco-mcp"],
       "env": {
-        "LOCO_PROJECT_NAME": "student-native",
         "LOCO_IMPORT_LOCALE": "de",
         "LOCO_WORKSPACE_ROOT": "${CLAUDE_PROJECT_DIR:-.}"
       }

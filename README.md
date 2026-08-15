@@ -24,7 +24,7 @@ operations.
 | Variable              | Required | Description                                                                                |
 | --------------------- | -------- | ------------------------------------------------------------------------------------------ |
 | `LOCO_API_KEY`        | Yes      | Loco service API key. Never pass it as a command argument.                                 |
-| `LOCO_PROJECT_NAME`   | Yes      | Exact project name the key must belong to.                                                 |
+| `LOCO_PROJECT_NAME`   | No       | Exact Loco project name. Defaults to the workspace directory name.                         |
 | `LOCO_IMPORT_LOCALE`  | No       | Fixed import locale. Defaults to `de`.                                                     |
 | `LOCO_WORKSPACE_ROOT` | No       | Only directory from which PO files may be read. Defaults to the process working directory. |
 | `LOCO_ENV_FILE`       | No       | Optional environment file path. Defaults to `<workspace>/.env.loco`.                       |
@@ -68,7 +68,6 @@ workspace or user `mcp.json`:
       "args": ["/absolute/path/to/loco-mcp/dist/index.js"],
       "env": {
         "LOCO_API_KEY": "${input:loco-api-key}",
-        "LOCO_PROJECT_NAME": "student-native",
         "LOCO_IMPORT_LOCALE": "de",
         "LOCO_WORKSPACE_ROOT": "${workspaceFolder}"
       }

@@ -1,0 +1,39 @@
+{
+  "name": "@123fahrschule/loco-mcp",
+  "version": "0.1.0",
+  "description": "Safe MCP tooling for Loco translation projects",
+  "type": "module",
+  "bin": {
+    "loco-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "node --import tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test src/__tests__/*.test.ts",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "gettext-parser": "^9.1.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/gettext-parser": "^9.0.0",
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.12",
+    "typescript": "^5.8.3"
+  }
+}

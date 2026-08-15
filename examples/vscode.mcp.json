@@ -1,0 +1,23 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "loco-api-key",
+      "description": "Loco service API key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "loco": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@123fahrschule/loco-mcp"],
+      "env": {
+        "LOCO_API_KEY": "${input:loco-api-key}",
+        "LOCO_PROJECT_NAME": "student-native",
+        "LOCO_IMPORT_LOCALE": "de",
+        "LOCO_WORKSPACE_ROOT": "${workspaceFolder}"
+      }
+    }
+  }
+}
